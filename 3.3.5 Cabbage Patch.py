@@ -33,3 +33,12 @@ def drawCabbages():
     for cabbage in range(5):
         drawCabbage(centerX,400)
         centerX+=100
+        
+    ### Intended Solution ###
+    # centerY=0
+    # for a in range(5):
+    #     centerX=0
+    #     for b in range(5):
+    #         drawCabbage(centerX,centerY)
+    #         centerX+=100
+    #     centerY+=100
