@@ -5,15 +5,15 @@ def drawMinion(minionColor):
 
     # Add code to draw the mouth!
     ### Place Your Code Here ###
-    Oval(200,300,170,80, fill="black")
-    Oval(200,280,170,80, fill=minionColor)
+    Oval(200, 300, 170, 80, fill="black")
+    Oval(200, 280, 170, 80, fill=minionColor)
     # glasses
     Rect(0, 100, 400, 60)
-    Circle(130, 130, 60, fill='snow', border='dimGray', borderWidth=15)
-    Circle(270, 130, 60, fill='snow', border='dimGray', borderWidth=15)
+    Circle(130, 130, 60, fill="snow", border="dimGray", borderWidth=15)
+    Circle(270, 130, 60, fill="snow", border="dimGray", borderWidth=15)
 
     # eyes
-    Circle(130, 130, 25, border='saddleBrown', borderWidth=10)
-    Circle(270, 130, 25, border='saddleBrown', borderWidth=10)
-    Circle(115, 115, 5, fill='white')
-    Circle(255, 115, 5, fill='white')
+    Circle(130, 130, 25, border="saddleBrown", borderWidth=10)
+    Circle(270, 130, 25, border="saddleBrown", borderWidth=10)
+    Circle(115, 115, 5, fill="white")
+    Circle(255, 115, 5, fill="white")

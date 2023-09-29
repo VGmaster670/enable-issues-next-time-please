@@ -1,9 +1,10 @@
 # background
 Rect(0, 0, 400, 400, fill=rgb(215, 160, 165))
 
+
 def drawIceCream(iceCreamFlavorList):
     # ice cream cone
-    Polygon(175, 290, 225, 290, 200, 360, fill='peru')
+    Polygon(175, 290, 225, 290, 200, 360, fill="peru")
 
     # This stores the centerY of the next ice cream scoop.
     centerY = 275
@@ -15,4 +16,4 @@ def drawIceCream(iceCreamFlavorList):
     ### Fix Your Code Here ###
     for scoop in iceCreamFlavorList:
         Circle(200, centerY, 30, fill=scoop)
-        centerY-=25
+        centerY -= 25

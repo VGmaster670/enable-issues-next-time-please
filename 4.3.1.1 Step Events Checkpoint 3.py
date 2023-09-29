@@ -1,4 +1,4 @@
-app.background = gradient('azure', 'lightBlue', 'blue')
+app.background = gradient("azure", "lightBlue", "blue")
 app.stepsPerSecond = 5
 app.counter = 0
 
@@ -14,19 +14,22 @@ rightArm = Line(200, 150, 250, 125)
 Line(200, 225, 250, 300)
 Line(200, 225, 150, 300)
 
+
 def toggleLeftArm():
     # Move the left arm down if currently up, up if currently down.
-    if (leftArm.y2 == 125):
+    if leftArm.y2 == 125:
         leftArm.y2 = 175
     else:
         leftArm.y2 = 125
 
+
 def toggleRightArm():
     # Move the right arm down if currently up, up if currently down.
-    if (rightArm.y2 == 125):
+    if rightArm.y2 == 125:
         rightArm.y2 = 175
     else:
         rightArm.y2 = 125
+
 
 def onStep():
     app.counter += 1
@@ -35,8 +38,8 @@ def onStep():
     # When app.counter is 2, call the right arm helper function. Also, set
     # app.counter to be 0.
     ### Place Your Code Here ###
-    if (app.counter==1):
+    if app.counter == 1:
         toggleLeftArm()
-    elif (app.counter==2):
+    elif app.counter == 2:
         toggleRightArm()
-        app.counter=0
+        app.counter = 0

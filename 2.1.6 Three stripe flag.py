@@ -5,6 +5,6 @@ def threeStripeFlag(country, color1, color2, color3):
 
     # Draw the rectangles and use the correct function parameters for each one!
     ### Place Your Code Here ###
-    Rect(50,100,100,200, fill=color1)
-    Rect(150,100,100,200, fill=color2)
-    Rect(250,100,100,200, fill=color3)
+    Rect(50, 100, 100, 200, fill=color1)
+    Rect(150, 100, 100, 200, fill=color2)
+    Rect(250, 100, 100, 200, fill=color3)

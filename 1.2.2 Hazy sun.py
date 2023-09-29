@@ -2,5 +2,5 @@
 ### (HINT: There are only two rectangles in the solution and
 #          both have gradients!)
 ### Place Your Code Here ###
-Rect(0,0,400,300, fill=gradient("yellow","skyBlue", "skyBlue"))
-Rect(0,300,400,100, fill=gradient("lawnGreen","paleGreen", start="bottom"))
+Rect(0, 0, 400, 300, fill=gradient("yellow", "skyBlue", "skyBlue"))
+Rect(0, 300, 400, 100, fill=gradient("lawnGreen", "paleGreen", start="bottom"))

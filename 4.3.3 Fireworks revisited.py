@@ -1,12 +1,26 @@
-app.background = gradient('midnightBlue', 'steelBlue', start='top')
+app.background = gradient("midnightBlue", "steelBlue", start="top")
 app.stepsPerSecond = 60
 
 app.colorIndex = 0
 
-Polygon(150, 400, 300, 200, 450, 400,
-        fill=gradient('darkSlateBlue', 'darkBlue', start='top'))
-Polygon(-100, 400, 100, 100, 300, 400,
-        fill=gradient('darkSlateBlue', 'midnightBlue', start='top'))
+Polygon(
+    150,
+    400,
+    300,
+    200,
+    450,
+    400,
+    fill=gradient("darkSlateBlue", "darkBlue", start="top"),
+)
+Polygon(
+    -100,
+    400,
+    100,
+    100,
+    300,
+    400,
+    fill=gradient("darkSlateBlue", "midnightBlue", start="top"),
+)
 
 fireworks = Group()
 streams = Group()
@@ -16,39 +30,48 @@ clouds = Group(
     Circle(110, 50, 20, fill=rgb(80, 80, 150)),
     Circle(100, 60, 20, fill=rgb(80, 80, 150)),
     Circle(120, 60, 20, fill=rgb(80, 80, 150)),
-    Circle(80, 60, 20, fill=rgb(80, 80, 150))
-    )
+    Circle(80, 60, 20, fill=rgb(80, 80, 150)),
+)
 
-ferrisWheel = Star(100, 300, 75, 20, fill='white', roundness=15)
+ferrisWheel = Star(100, 300, 75, 20, fill="white", roundness=15)
+
 
 def drawRings():
     # Adds inner loops for ferris wheel.
-    ringBorderColors = [ 'lightBlue', 'red', 'yellow', 'green', 'purple', 'blue' ]
+    ringBorderColors = ["lightBlue", "red", "yellow", "green", "purple", "blue"]
     ringNumber = 1
 
     # Makes a ring for each of the colors in the ringBorderColors list.
     for borderColor in ringBorderColors:
         newRadius = ferrisWheel.radius / (ringNumber)
-        Circle(100, 300, newRadius, fill=None, border=borderColor, borderWidth=8,
-               opacity=70)
+        Circle(
+            100,
+            300,
+            newRadius,
+            fill=None,
+            border=borderColor,
+            borderWidth=8,
+            opacity=70,
+        )
         ringNumber += 1
+
 
 drawRings()
 
 # Adds highlights and legs for ferris wheel.
-Circle(100, 300, 71, fill=None, border='white')
-Circle(100, 300, 79, fill=None, border='white')
-Line(75, 400, 100, 300, fill='white', lineWidth=4)
-Line(125, 400, 100, 300, fill='white', lineWidth=4)
+Circle(100, 300, 71, fill=None, border="white")
+Circle(100, 300, 79, fill=None, border="white")
+Line(75, 400, 100, 300, fill="white", lineWidth=4)
+Line(125, 400, 100, 300, fill="white", lineWidth=4)
+
 
 def onMousePress(mouseX, mouseY):
-    fireWorkColors = [ 'red', 'lime', 'magenta', 'yellow', 'orangeRed',
-                       'powderBlue' ]
+    fireWorkColors = ["red", "lime", "magenta", "yellow", "orangeRed", "powderBlue"]
 
     # Get the next color for the firework from fireWorkColors.
     ### Fix Your Code Here ###
-    color = fireWorkColors[app.colorIndex%6]
-    app.colorIndex+=1
+    color = fireWorkColors[app.colorIndex % 6]
+    app.colorIndex += 1
 
     # Makes the firework.
     newStream = Line(mouseX, 400, mouseX, 460, fill=color)
@@ -56,13 +79,15 @@ def onMousePress(mouseX, mouseY):
     newStream.color = color
     streams.add(newStream)
 
+
 def makeNewExplosion(cx, cy, color):
     # Firework goes off.
     firework = Group(
         Star(cx, cy, 15, 1500, fill=color),
-        Star(cx, cy, 1, 30, fill=color, roundness=10)
-        )
+        Star(cx, cy, 1, 30, fill=color, roundness=10),
+    )
     fireworks.add(firework)
+
 
 def animateLaunches():
     # Moves the firework trails up.
@@ -72,9 +97,10 @@ def animateLaunches():
         stream.opacity -= 1
 
         # If the firework has reached the height, it should explode.
-        if (stream.top <= stream.fireworkHeight):
+        if stream.top <= stream.fireworkHeight:
             streams.remove(stream)
             makeNewExplosion(stream.x1, stream.y1, stream.color)
+
 
 def animateExplosions():
     # Expands and fades out all of the explosions.
@@ -86,16 +112,19 @@ def animateExplosions():
         firework.rotateAngle += 5
 
         # Once the firework has faded enough, removes it completely.
-        if (firework.opacity <= 3):
+        if firework.opacity <= 3:
             fireworks.remove(firework)
+
 
 def rotateFerrisWheel():
     ferrisWheel.rotateAngle += 0.1
 
+
 def moveCloud():
     clouds.centerX += 1
-    if (clouds.left >= 400):
+    if clouds.left >= 400:
         clouds.right = 0
+
 
 def onStep():
     # Call all of the helper functions needed to make the animation run!

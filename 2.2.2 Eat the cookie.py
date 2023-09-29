@@ -1,12 +1,14 @@
 # background
-Rect(0, 0, 400, 400, fill='lightSteelBlue')
+Rect(0, 0, 400, 400, fill="lightSteelBlue")
 
 # cookie
-Circle(205, 205, 155, fill='saddleBrown')
-Circle(200, 200, 150, fill='peru')
+Circle(205, 205, 155, fill="saddleBrown")
+Circle(200, 200, 150, fill="peru")
+
 
 def drawChocoChips(centerX, centerY):
     Circle(centerX, centerY, 10, fill=rgb(90, 35, 15))
+
 
 # chocolate chips
 drawChocoChips(140, 90)
