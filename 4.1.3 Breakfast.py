@@ -17,11 +17,11 @@ Star(230, 320, 55, 12, fill="antiqueWhite", roundness=0)
 def drawBreakfast(isThirsty, isTired, isVegan, isVegetarian):
     # Draw drinks depending on if you are thirsty and/or if you are tired.
     ### Place Your Code Here ###
-    if isThirsty == True:
+    if isThirsty:
         Circle(
             350, 70, 50, border="white", borderWidth=4, fill=gradient("gold", "orange")
         )
-    if isThirsty == True and isTired == True:
+    if isThirsty and isTired:
         Oval(85, 65, 50, 20, fill="white")
         Circle(20, 70, 55, border="white", borderWidth=10, fill=rgb(112, 73, 60))
     # Draw extra food based on vegan/vegetarian preference.

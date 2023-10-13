@@ -25,17 +25,17 @@ def onMousePress(mouseX, mouseY):
     # that label. Change the leaves and ground visibility when needed.
     ### (HINT: Use a shape method to check what label you clicked.)
     ### Place Your Code Here ###
-    if springLabel.hits(mouseX, mouseY) == True:
+    if springLabel.hits(mouseX, mouseY):
         leaves.fill = "lightPink"
         ground.visible = False
-    if summerLabel.hits(mouseX, mouseY) == True:
+    if summerLabel.hits(mouseX, mouseY):
         leaves.fill = "forestGreen"
         ground.visible = False
-    if fallLabel.hits(mouseX, mouseY) == True:
+    if fallLabel.hits(mouseX, mouseY):
         leaves.fill = "darkOrange"
         ground.visible = True
         ground.fill = "fireBrick"
-    if winterLabel.hits(mouseX, mouseY) == True:
+    if winterLabel.hits(mouseX, mouseY):
         leaves.fill = "white"
         ground.visible = True
         ground.fill = "white"

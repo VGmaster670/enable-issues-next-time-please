@@ -52,7 +52,7 @@ def onMousePress(mouseX, mouseY):
     # If mouse presses the handle, pull the handle down, open the box,
     # and show Jack.
     ### Place Your Code Here ###
-    if handle.hits(mouseX, mouseY) == True:
+    if handle.hits(mouseX, mouseY):
         jack.visible = True
         lid.left += 130
         handle.bottom = 325
@@ -62,7 +62,7 @@ def onMousePress(mouseX, mouseY):
 def onMouseRelease(mouseX, mouseY):
     # If Jack is visible, push the handle up, close the box, and hide Jack.
     ### Place Your Code Here ###
-    if jack.visible == True:
+    if jack.visible:
         jack.visible = False
         lid.left -= 130
         handle.bottom = 235

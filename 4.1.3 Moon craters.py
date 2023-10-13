@@ -14,7 +14,7 @@ def onMousePress(mouseX, mouseY):
     # next crater.
     ### (HINT: Use the hits method to check if the moon was clicked.)
     ### Place Your Code Here ###
-    if innerMoon.hits(mouseX, mouseY) == True:
+    if innerMoon.hits(mouseX, mouseY):
         Circle(
             mouseX,
             mouseY,

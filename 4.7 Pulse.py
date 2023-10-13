@@ -33,7 +33,7 @@ def restartGame():
 
 def onKeyPress(key):
     # When a key is pressed while the game is over, restart.
-    if gameOverGroup.visible == True:
+    if gameOverGroup.visible:
         restartGame()
     else:
         # If the ring was not close enough to the star, end the game.

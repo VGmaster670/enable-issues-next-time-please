@@ -56,7 +56,7 @@ def checkGameOver():
     # Checks the number of bugs that are up.
     upCount = 0
     for bug in app.bugs:
-        if bug.visible == True:
+        if bug.visible:
             upCount += 1
 
     # If all the bugs are up, the game is over.
@@ -72,7 +72,7 @@ def onMousePress(mouseX, mouseY):
 
     # Checks if any bug is hit by the hammer.
     for bug in app.bugs:
-        if (bug.visible == True) and (bug.hitsShape(hammer) == True):
+        if (bug.visible) and (bug.hitsShape(hammer)):
             bug.visible = False
             score.value += 1
 

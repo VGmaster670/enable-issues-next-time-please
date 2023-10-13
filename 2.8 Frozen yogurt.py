@@ -63,11 +63,11 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: Use a helper function we defined above. What arguments should
     #          you pass into the function?)
     ### Place Your Code Here ###
-    if handle1.hits(mouseX, mouseY) == True:
+    if handle1.hits(mouseX, mouseY):
         pressHandle(handle1, flow1)
-    elif handle2.hits(mouseX, mouseY) == True:
+    elif handle2.hits(mouseX, mouseY):
         pressHandle(handle2, flow2)
-    elif handle3.hits(mouseX, mouseY) == True:
+    elif handle3.hits(mouseX, mouseY):
         pressHandle(handle3, flow3)
 
 

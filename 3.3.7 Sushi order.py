@@ -66,13 +66,13 @@ def onMousePress(mouseX, mouseY):
     # sushi to the right and a properly colored sushi should be added to the
     # left of the conveyor belt.
     ### Place Your Code Here ###
-    if salmon.hits(mouseX, mouseY) == True:
+    if salmon.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("coral")
-    if tuna.hits(mouseX, mouseY) == True:
+    if tuna.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("crimson")
-    if yellowTail.hits(mouseX, mouseY) == True:
+    if yellowTail.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("lightCoral")
     # Otherwise, you should eat the sushi from right to left.

@@ -92,7 +92,7 @@ def onMousePress(mouseX, mouseY):
     # the table.
     ### (HINT: The mouse's centerY should be 310.)
     ### Place your code here ###
-    if table.hits(mouseX, mouseY) == True:
+    if table.hits(mouseX, mouseY):
         mouse.centerX = 120
         mouse.centerY = 310
         mouse.visible = True
@@ -110,11 +110,11 @@ def onMouseRelease(mouseX, mouseY):
     # cheese.
     ### (HINT: Call the eatCheese function with the proper cheese group!)
     ### Place your code here ###
-    if cheeseWheel.hits(mouseX, mouseY) == True:
+    if cheeseWheel.hits(mouseX, mouseY):
         eatCheese(cheeseWheel)
-    if cheeseBlock.hits(mouseX, mouseY) == True:
+    if cheeseBlock.hits(mouseX, mouseY):
         eatCheese(cheeseBlock)
-    if cheeseWedge.hits(mouseX, mouseY) == True:
+    if cheeseWedge.hits(mouseX, mouseY):
         eatCheese(cheeseWedge)
     # If there is still uneaten cheese, hides the mouse and makes the eyes
     # reappear in the mousehole.

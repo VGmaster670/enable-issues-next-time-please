@@ -52,7 +52,7 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: The books are stored in app.books. Make sure that this list is
     #          updated so we can't click on books that are sold out!)
     for book in app.books:
-        if book.hits(mouseX, mouseY) == True:
+        if book.hits(mouseX, mouseY):
             displaySoldOut(book.centerX, book.centerY)
             app.books.remove(book)
             bagLabel.value += 1

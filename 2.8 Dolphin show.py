@@ -165,9 +165,9 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: Use the helper function we defined above. What argument should
     # .         you pass into the function?)
     ### Place Your Code Here ###
-    if dolphin1.hits(mouseX, mouseY) == True:
+    if dolphin1.hits(mouseX, mouseY):
         bringDolphinToFront(dolphin1)
-    elif dolphin2.hits(mouseX, mouseY) == True:
+    elif dolphin2.hits(mouseX, mouseY):
         bringDolphinToFront(dolphin2)
-    elif dolphin3.hits(mouseX, mouseY) == True:
+    elif dolphin3.hits(mouseX, mouseY):
         bringDolphinToFront(dolphin3)

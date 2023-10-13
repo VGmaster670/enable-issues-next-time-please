@@ -87,8 +87,8 @@ def onMouseMove(mouseX, mouseY):
     #          use to check if a clip has been picked up!)
     ### Place Your Code Here ###
     for paperclip in paperclips:
-        if paperclip.hitsShape(magnet) == True:
+        if paperclip.hitsShape(magnet):
             paperclip.isPickedUp = True
-        if paperclip.isPickedUp == True:
+        if paperclip.isPickedUp:
             paperclip.centerX = mouseX
             paperclip.centerY = mouseY

@@ -27,12 +27,12 @@ def drawGroundAndSky(groundColor):
 def drawScene(isMountainous, isDesert, isBeach, isNightTime, destination, milesToGo):
     # Draw the ground and ocean based on the values of the first three parameters.
     ### Place Your Code Here ###
-    if isMountainous == True:
+    if isMountainous:
         drawGroundAndSky("lightGreen")
         drawMountains()
-    elif isDesert == True:
+    elif isDesert:
         drawGroundAndSky("burlyWood")
-    elif isBeach == True:
+    elif isBeach:
         drawGroundAndSky("lightGreen")
         drawOcean()
     # Draw the sign board with destination and milesToGo.
@@ -46,5 +46,5 @@ def drawScene(isMountainous, isDesert, isBeach, isNightTime, destination, milesT
     ### (HINT: Use the Inspector to see what was added to the canvas for this
     #          test case.)
     ### Place Your Code Here ###
-    if isNightTime == True:
+    if isNightTime:
         Rect(0, 0, 400, 400, fill="black", opacity=50)

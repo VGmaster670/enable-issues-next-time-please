@@ -69,7 +69,7 @@ def onMouseMove(mouseX, mouseY):
 
 
 def onKeyPress(key):
-    if gameOverText.visible == True:
+    if gameOverText.visible:
         newGame()
 
 
@@ -83,6 +83,6 @@ def onStep():
     # End the game if the player hits the barrier.
     ### (HINT: We can make the game pause by setting app.paused to True.)
     ### Place Your Code Here ###
-    if player.hitsShape(barrier) == True:
+    if player.hitsShape(barrier):
         gameOverText.visible = True
         app.paused = True

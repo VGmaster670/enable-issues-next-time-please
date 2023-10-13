@@ -23,7 +23,7 @@ def onMousePress(mouseX, mouseY):
         app.isSnowing = True
         ground.fill = "white"
         rain.fill = "white"
-    elif app.isSnowing == True:
+    elif app.isSnowing:
         app.isSnowing = False
         ground.fill = "darkGreen"
         rain.fill = "steelBlue"
@@ -37,7 +37,7 @@ def onMousePress(mouseX, mouseY):
 
 def onMouseMove(mouseX, mouseY):
     # When it is snowing, the snow builds up. Otherwise, the plant grows.
-    if app.isSnowing == True:
+    if app.isSnowing:
         ground.top -= 2
         ground.height += 2
     else:

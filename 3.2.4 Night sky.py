@@ -119,7 +119,7 @@ telescope.visible = False
 def onMousePress(mouseX, mouseY):
     # Toggle the telescope's visibility by setting it to False when
     # it's True, and True otherwise.
-    if telescope.visible == True:
+    if telescope.visible:
         telescope.visible = False
     else:
         telescope.visible = True

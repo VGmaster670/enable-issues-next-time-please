@@ -29,7 +29,7 @@ def drawMessage(message, isFromMyself):
     # if this text is from me or not, recolor and reposition the bubble. Then add
     # a polygon for the bubble's tail and the text bubble message.
     ### Place Your Code Here ###
-    if isFromMyself == True:
+    if isFromMyself:
         textBubble.centerX = 292
         tail = Polygon(
             335,

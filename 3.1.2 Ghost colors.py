@@ -23,9 +23,9 @@ def onMousePress(mouseX, mouseY):
     # If the mouse clicks on a color button, the ghost should change color
     # accordingly.
     ### Place Your Code Here ###
-    if cyanButton.hits(mouseX, mouseY) == True:
+    if cyanButton.hits(mouseX, mouseY):
         ghost.fill = "cyan"
-    if magentaButton.hits(mouseX, mouseY) == True:
+    if magentaButton.hits(mouseX, mouseY):
         ghost.fill = "magenta"
-    if yellowButton.hits(mouseX, mouseY) == True:
+    if yellowButton.hits(mouseX, mouseY):
         ghost.fill = "yellow"

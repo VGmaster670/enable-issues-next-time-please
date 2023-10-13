@@ -29,7 +29,7 @@ def drawMessage(message, isFromMyself):
     # This function now takes a message and a boolean isFromMyself. Depending on
     # if this text is from me or not, recolor and reposition the bubble. Then add
     # a polygon for the bubble's tail and the text bubble message.
-    if isFromMyself == True:
+    if isFromMyself:
         textBubble.centerX = 292
         tail = Polygon(
             335,
@@ -81,14 +81,14 @@ def onStep():
     ### (HINT: We have defined several lists as app custom properties, and
     #          a texts custom property above.)
     ### Place Your Code Here ###
-    if texts.amITexting == True:
+    if texts.amITexting:
         mySentence = "I "
         mySentence += choice(app.myVerbs) + " "
         mySentence += choice(app.myAnimals) + "."
         drawMessage(mySentence, True)
     else:
         drawMessage(choice(app.theirResponses), False)
-    if texts.amITexting == True:
+    if texts.amITexting:
         texts.amITexting = False
     else:
         texts.amITexting = True

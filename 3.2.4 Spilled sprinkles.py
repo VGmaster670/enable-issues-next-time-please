@@ -70,9 +70,9 @@ def onMousePress(mouseX, mouseY):
     ### Place Your Code Here ###
     for sprinkle in sprinkles:
         if app.selected == None:
-            if sprinkle.hits(mouseX, mouseY) == True:
+            if sprinkle.hits(mouseX, mouseY):
                 app.selected = sprinkle
-        elif sprinkle.hits(mouseX, mouseY) == True:
+        elif sprinkle.hits(mouseX, mouseY):
             app.selected = None
 
 

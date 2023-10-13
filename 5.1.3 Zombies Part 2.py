@@ -21,7 +21,7 @@ def drawPerson(cx, cy):
     # a blue "halo" behind them.
     isImmuneOptions = [True, False]
     person.isImmune = choice(isImmuneOptions)
-    if person.isImmune == True:
+    if person.isImmune:
         halo = Circle(person.centerX, person.centerY, 25, fill="skyBlue")
         people.add(halo)
 
@@ -40,7 +40,7 @@ def moveInfectedZone(x):
     # If we clicked to the right of the infected zone's right edge, increase the
     # width of the infected zone to be 1 pixel more than the x position.
     ### Place Your Code Here ###
-    if not infectedZone.hits(x, 200) == True:
+    if not infectedZone.hits(x, 200):
         infectedZone.width = x + 1
 
     #### END OF BLOCK ####

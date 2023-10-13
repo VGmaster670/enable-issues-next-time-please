@@ -86,7 +86,7 @@ def onStep():
     # the light beam. Also increase the rotate angle of that cow by 5.
     ### Place Your Code Here ###
     for cow in cows.children:
-        if cow.hitsShape(light) == True:
+        if cow.hitsShape(light):
             cow.centerX = light.centerX
             cow.centerY = light.centerY
             cow.rotateAngle += 5

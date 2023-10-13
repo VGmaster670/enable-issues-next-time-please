@@ -21,7 +21,7 @@ def drawPerson(cx, cy):
     # a blue "halo" behind them.
     isImmuneOptions = [True, False]
     person.isImmune = choice(isImmuneOptions)
-    if person.isImmune == True:
+    if person.isImmune:
         halo = Circle(person.centerX, person.centerY, 25, fill="skyBlue")
         person.add(halo)
         halo.toBack()

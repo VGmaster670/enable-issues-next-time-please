@@ -53,7 +53,7 @@ def onMousePress(mouseX, mouseY):
     numberOfPetalsInRing = [19, 17, 13, 11, 7, 5, 1]
 
     # If you click on the roseBush, draw a rose.
-    if roseBush.hits(mouseX, mouseY) == True:
+    if roseBush.hits(mouseX, mouseY):
         getRoseColors()
 
         # To draw a rose, draw one petal ring for each number in the

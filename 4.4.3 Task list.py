@@ -24,12 +24,12 @@ pencil = Group(
 
 def tryCheckingBox(mouseX, mouseY):
     for checkbox in checkboxes:
-        if checkbox.hits(mouseX, mouseY) == True:
+        if checkbox.hits(mouseX, mouseY):
             Label("x", checkbox.centerX, checkbox.centerY)
 
 
 def onMousePress(mouseX, mouseY):
-    if pencil.hits(mouseX, mouseY) == True:
+    if pencil.hits(mouseX, mouseY):
         # Ask the user for a new task, then use their input to get a string that
         # is of the format 'taskNumber. newTaskHere', like shown in the test cases.
         ### Place Your Code Here ###

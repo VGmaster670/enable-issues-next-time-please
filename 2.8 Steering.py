@@ -120,7 +120,7 @@ def onMousePress(mouseX, mouseY):
     ### Place Your Code Here ###
     if leftHand.hitsShape(steeringWheel) == False:
         message.value = "Put your hands on the steering wheel!"
-    if leftHand.hitsShape(steeringWheel) == True:
+    if leftHand.hitsShape(steeringWheel):
         message.value = "Close!"
-    if steeringWheel.containsShape(leftHand) == True:
+    if steeringWheel.containsShape(leftHand):
         message.value = "Good!"

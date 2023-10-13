@@ -54,7 +54,7 @@ def onMouseMove(mouseX, mouseY):
     # the alarm lights. Otherwise, restore the original background.
     ### (HINT: The alarm light rotates by a 5 degree angle.)
     ### Place Your Code Here ###
-    if hand.hitsShape(meteorite) == True:
+    if hand.hitsShape(meteorite):
         alarmCover.visible = True
         alarmLights.visible = True
         alarmLights.rotateAngle += 5

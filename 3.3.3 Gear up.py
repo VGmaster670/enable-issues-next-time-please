@@ -189,10 +189,10 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: Some helpful app custom properties have been created for you
     #          in the code above.)
     ### Place Your Code Here ###
-    if downgradeButton.hits(mouseX, mouseY) == True:
+    if downgradeButton.hits(mouseX, mouseY):
         app.level -= 1
         armor.fill = app.armorColors[app.level % 6]
-    if upgradeButton.hits(mouseX, mouseY) == True:
+    if upgradeButton.hits(mouseX, mouseY):
         app.level += 1
         armor.fill = app.armorColors[app.level % 6]
 

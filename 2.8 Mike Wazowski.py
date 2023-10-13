@@ -18,7 +18,7 @@ def onMousePress(mouseX, mouseY):
 
     # When the finger is poking the eye, close the eyelid.
     ### Place Your Code Here ###
-    if finger.hitsShape(eye) == True:
+    if finger.hitsShape(eye):
         eyelid.visible = True
     else:
         eyelid.visible = False

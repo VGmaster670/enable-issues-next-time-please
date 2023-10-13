@@ -75,5 +75,5 @@ def onMouseMove(mouseX, mouseY):
 
     # The flytrap should eat the fly whenever the fly flies into its mouth.
     ### Place Your Code Here ###
-    if (fly.hitsShape(flytrap1)) == True or (fly.hitsShape(flytrap2) == True):
+    if (fly.hitsShape(flytrap1)) or (fly.hitsShape(flytrap2)):
         closeFlytrap()

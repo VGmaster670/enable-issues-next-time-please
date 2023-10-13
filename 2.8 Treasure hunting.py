@@ -53,7 +53,7 @@ Rect(175, 175, 50, 50, fill="snow", opacity=50)
 def onMouseMove(mouseX, mouseY):
     # Only set off the alarms when the mouse is inside the laser barrier.
     ### Fix Your Code Here ###
-    if laserBarrier.contains(mouseX, mouseY) == True:
+    if laserBarrier.contains(mouseX, mouseY):
         alarm1.fill = "crimson"
         alarm1Light.visible = True
         alarm2.fill = "crimson"
@@ -66,10 +66,10 @@ def onMouseMove(mouseX, mouseY):
     # When we touch the treasure, pick it up.
     ### (HINT: We've defined a custom property for you above!)
     ### Place Your Code Here ###
-    if treasure.hits(mouseX, mouseY) == True:
+    if treasure.hits(mouseX, mouseY):
         treasure.isHeld = True
     # If we have taken the treasure, move it with the mouse.
     ### Place Your Code Here ###
-    if treasure.isHeld == True:
+    if treasure.isHeld:
         treasure.centerX = mouseX
         treasure.centerY = mouseY

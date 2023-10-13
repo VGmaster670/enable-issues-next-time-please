@@ -71,13 +71,13 @@ def onMousePress(mouseX, mouseY):
     # If any part of retro mickey is clicked on, that part should be cleared,
     # revealing the more modern version behind it!
     ### Place Your Code Here ###
-    if retroPants.hits(mouseX, mouseY) == True:
+    if retroPants.hits(mouseX, mouseY):
         retroMickey.remove(retroPants)
-    if retroFace.hits(mouseX, mouseY) == True:
+    if retroFace.hits(mouseX, mouseY):
         retroMickey.remove(retroFace)
-    if retroButtons.hits(mouseX, mouseY) == True:
+    if retroButtons.hits(mouseX, mouseY):
         retroMickey.remove(retroButtons)
-    if retroEyes.hits(mouseX, mouseY) == True:
+    if retroEyes.hits(mouseX, mouseY):
         retroMickey.remove(retroEyes)
-    if retroMouth.hits(mouseX, mouseY) == True:
+    if retroMouth.hits(mouseX, mouseY):
         retroMickey.remove(retroMouth)

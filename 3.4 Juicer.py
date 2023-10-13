@@ -115,11 +115,11 @@ Rect(0, 350, 400, 25, fill="tan")
 
 def onMousePress(mouseX, mouseY):
     newFruit = Group()
-    if orange.contains(mouseX, mouseY) == True:
+    if orange.contains(mouseX, mouseY):
         drawOrange(275, 55, newFruit)
-    if grapes.contains(mouseX, mouseY) == True:
+    if grapes.contains(mouseX, mouseY):
         drawGrapes(295, 55, newFruit)
-    if watermelon.contains(mouseX, mouseY) == True:
+    if watermelon.contains(mouseX, mouseY):
         drawWatermelon(305, 55, newFruit)
 
     # When the new fruit has some children, add it to the fruitsToBlend list and
@@ -131,7 +131,7 @@ def onMousePress(mouseX, mouseY):
     # When the power button is clicked on, blend the fruits by clearing them and
     # drawing a rectangle in the cup with an appropriate opacity and color.
     ### Place Your Code Here ###
-    if powerButton.contains(mouseX, mouseY) == True:
+    if powerButton.contains(mouseX, mouseY):
         for fruit in app.fruitsToBlend:
             fruit.clear()
             Rect(175, 210, 65, 90, fill=fruit.juiceColor, opacity=30)
