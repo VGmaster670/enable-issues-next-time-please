@@ -147,10 +147,10 @@ def onMouseMove(mouseX, mouseY):
     ### (HINT: Each objet has custom properties for the small and large sizes.)
     ### (HINT: Check whether the center of the object hits the lens.)
     ### Place Your Code Here ###
-    for obj in objects.children:
-        if lens.hits(obj.centerX, obj.centerY):
-            obj.width = obj.largeW
-            obj.height = obj.largeH
+    for object in objects.children:
+        if lens.hits(object.centerX, object.centerY):
+            object.width = object.largeW
+            object.height = object.largeH
         else:
-            obj.width = obj.smallW
-            obj.height = obj.smallH
+            object.width = object.smallW
+            object.height = object.smallH

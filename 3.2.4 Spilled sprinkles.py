@@ -69,9 +69,8 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: We should let go of something by making it no longer selected.)
     ### Place Your Code Here ###
     for sprinkle in sprinkles:
-        if app.selected == None:
-            if sprinkle.hits(mouseX, mouseY):
-                app.selected = sprinkle
+        if sprinkle.hits(mouseX, mouseY):
+            app.selected = sprinkle
         elif sprinkle.hits(mouseX, mouseY):
             app.selected = None
 

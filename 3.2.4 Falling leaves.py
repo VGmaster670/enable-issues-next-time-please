@@ -111,7 +111,7 @@ def onMousePress(mouseX, mouseY):
     # The leaf should move only if its center is above the grass.
     ### (HINT: Check the position of each leaf using its center coordinate.)
     ### Place Your Code Here ###
-    for lofs in leaves:
-        if lofs.centerY < 320:
-            lofs.centerY += 8
-            lofs.rotateAngle += 20
+    for leaf in leaves:
+        if leaf.centerY < 320:
+            leaf.centerY += 8
+            leaf.rotateAngle += 20
