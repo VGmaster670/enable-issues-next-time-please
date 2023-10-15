@@ -71,8 +71,6 @@ def onMousePress(mouseX, mouseY):
     for sprinkle in sprinkles:
         if sprinkle.hits(mouseX, mouseY):
             app.selected = sprinkle
-        elif sprinkle.hits(mouseX, mouseY):
-            app.selected = None
 
 
 def onMouseMove(mouseX, mouseY):
