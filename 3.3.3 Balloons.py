@@ -33,18 +33,10 @@ def onMousePress(mouseX, mouseY):
     # balloon should be square.
     ### (HINT: We have created two functions above that draw the two different
     # balloon shapes.)
-    if app.index == (0):
+    if app.index % 2 == 0:
         drawCircularBalloon(mouseX, mouseY, app.colors[app.index])
-        print(app.index)
-    if app.index == (2):
-        drawCircularBalloon(mouseX, mouseY, app.colors[app.index])
-        print(app.index)
-    if app.index == (1):
+    if app.index % 2 == 1:
         drawSquareBalloon(mouseX, mouseY, app.colors[app.index])
-        print(app.index)
-    if app.index == (3):
-        drawSquareBalloon(mouseX, mouseY, app.colors[app.index])
-        print(app.index)
 
     # Updates the current index for the next time we press the mouse.
-    app.index = (app.index + 1) % 4
+    app.index = (app.index + 1) % len(app.colors)

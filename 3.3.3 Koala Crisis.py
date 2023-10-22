@@ -95,7 +95,7 @@ def onMousePress(mouseX, mouseY):
     ### (HINT: The next hat the koala should wear is at the next index of the
     #          hats list. The current hat's index is stored in app.hatIndex.)
     ### Place Your Code Here ###
-    app.hatIndex += 1
-    app.hats[app.hatIndex % 4].visible = True
-    app.hats[(app.hatIndex - 1) % 4].visible = False
+    app.hats[app.hatIndex].visible = False
+    app.hatIndex = (app.hatIndex + 1) % 4
+    app.hats[app.hatIndex].visible = True
     adjustSmile()

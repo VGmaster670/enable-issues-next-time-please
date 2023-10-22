@@ -49,13 +49,13 @@ def drawCard(x, y, rank, suit):
     if suit == app.hearts:
         suitColor = "tomato"
         drawHearts(x + 50, y + 75, suitColor)
-    if suit == app.diamonds:
+    elif suit == app.diamonds:
         suitColor = "tomato"
         drawDiamonds(x + 50, y + 75, suitColor)
-    if suit == app.clubs:
+    elif suit == app.clubs:
         suitColor = "dimGrey"
         drawClubs(x + 50, y + 75, suitColor)
-    if suit == app.spades:
+    elif suit == app.spades:
         suitColor = "dimGrey"
         drawSpades(x + 50, y + 75, suitColor)
 

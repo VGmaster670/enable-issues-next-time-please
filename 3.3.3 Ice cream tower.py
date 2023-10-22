@@ -14,6 +14,6 @@ def drawIceCream(iceCreamFlavorList):
     ### (HINT: The centerY of the ice cream scoop decreases by 25 on each
     #          loop iteration.)
     ### Fix Your Code Here ###
-    for scoop in iceCreamFlavorList:
-        Circle(200, centerY, 30, fill=scoop)
+    for color in iceCreamFlavorList:
+        Circle(200, centerY, 30, fill=color)
         centerY -= 25
