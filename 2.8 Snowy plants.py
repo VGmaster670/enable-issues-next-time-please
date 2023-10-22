@@ -19,7 +19,7 @@ def onMousePress(mouseX, mouseY):
     # Change the season.
     ### (HINT: We defined a custom app property above that might be helpful!)
     ### Place Your Code Here ###
-    if app.isSnowing == False:
+    if not app.isSnowing:
         app.isSnowing = True
         ground.fill = "white"
         rain.fill = "white"

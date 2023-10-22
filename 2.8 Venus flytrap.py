@@ -67,7 +67,7 @@ def closeFlytrap():
 def onMouseMove(mouseX, mouseY):
     # The fly should only be moved to the mouse if it hasn't already been eaten.
     ### Fix Your Code Here ###
-    if fly.isEaten == False:
+    if not fly.isEaten:
         flyWings.centerX = mouseX
         flyWings.centerY = mouseY
         fly.centerX = mouseX

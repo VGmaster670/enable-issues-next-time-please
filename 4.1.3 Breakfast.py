@@ -27,13 +27,13 @@ def drawBreakfast(isThirsty, isTired, isVegan, isVegetarian):
     # Draw extra food based on vegan/vegetarian preference.
     ### (HINT: Code for eggs and sausages are given. Place them appropriately.)
     ### Fix Your Code Here ###
-    if isVegan == False:
+    if not isVegan:
         # eggs
         Oval(265, 160, 110, 100, fill="white", border="lightGrey", rotateAngle=20)
         Circle(250, 150, 20, fill="gold")
         Oval(285, 220, 110, 90, fill="white", border="lightGrey", rotateAngle=20)
         Circle(300, 220, 20, fill="gold")
-        if isVegetarian == False:
+        if not isVegetarian:
             # sausages
             Oval(140, 135, 100, 40, fill="maroon", rotateAngle=350)
             Oval(190, 130, 100, 40, fill="brown", rotateAngle=320)

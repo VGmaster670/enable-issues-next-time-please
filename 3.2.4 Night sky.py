@@ -135,7 +135,7 @@ def onMousePress(mouseX, mouseY):
 def onMouseMove(mouseX, mouseY):
     # If the telescope is not visible, moves it off screen. Otherwise,
     # center it at the position of the mouse.
-    if telescope.visible == False:
+    if not telescope.visible:
         telescope.centerX = 500
     else:
         telescope.centerX = mouseX

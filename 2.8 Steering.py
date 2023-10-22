@@ -118,7 +118,7 @@ def onMousePress(mouseX, mouseY):
     #   if the left hand is touching the wheel, or
     #   if the left hand is not touching the wheel.
     ### Place Your Code Here ###
-    if leftHand.hitsShape(steeringWheel) == False:
+    if not leftHand.hitsShape(steeringWheel):
         message.value = "Put your hands on the steering wheel!"
     if leftHand.hitsShape(steeringWheel):
         message.value = "Close!"

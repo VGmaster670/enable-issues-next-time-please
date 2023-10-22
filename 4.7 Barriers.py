@@ -63,7 +63,7 @@ def onMouseMove(mouseX, mouseY):
     # When the game is not over, set the player's center to the current mouse
     # position.
     ### Place Your Code Here ###
-    if gameOverText.visible == False:
+    if not gameOverText.visible:
         player.centerX = mouseX
         player.centerY = mouseY
 
@@ -77,7 +77,7 @@ def onStep():
     # If the game is not over, move the barrier.
     ### (HINT: The gameOverText is only visible when the game is over.)
     ### Place Your Code Here ###
-    if gameOverText.visible == False:
+    if not gameOverText.visible:
         barrier.visible = True
         moveBarrier()
     # End the game if the player hits the barrier.

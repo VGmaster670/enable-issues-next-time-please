@@ -38,14 +38,14 @@ def createPeople():
 def moveInfectedZone(x):
     # If we clicked to the right of the infected zone's right edge, increase the
     # width of the infected zone to be 1 pixel more than the x position.
-    if infectedZone.hits(x, 200) == False:
+    if not infectedZone.hits(x, 200):
         infectedZone.width = x + 1
 
     # If the infected zone is further right than a non-immune person's left
     # edge, that person's head should become green.
     ### Place Your Code Here ###
     for person in people.children:
-        if infectedZone.right > person.left and person.isImmune == False:
+        if not infectedZone.right > person.left and person.isImmune:
             person.head.fill = "green"
 
 
