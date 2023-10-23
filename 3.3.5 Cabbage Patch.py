@@ -15,32 +15,10 @@ def drawCabbages():
     # Draw 5 rows of cabbages using a for loop. In each loop you should draw
     # 5 cabbages. They should all be 100 pixels apart.
     ### Place Your Code Here ###
-    centerX = 0
-    for cabbage in range(5):
-        drawCabbage(centerX, 0)
-        centerX += 100
-    centerX = 0
-    for cabbage in range(5):
-        drawCabbage(centerX, 100)
-        centerX += 100
-    centerX = 0
-    for cabbage in range(5):
-        drawCabbage(centerX, 200)
-        centerX += 100
-    centerX = 0
-    for cabbage in range(5):
-        drawCabbage(centerX, 300)
-        centerX += 100
-    centerX = 0
-    for cabbage in range(5):
-        drawCabbage(centerX, 400)
-        centerX += 100
-
-    ### Intended Solution ###
-    # centerY=0
-    # for a in range(5):
-    #     centerX=0
-    #     for b in range(5):
-    #         drawCabbage(centerX,centerY)
-    #         centerX+=100
-    #     centerY+=100
+    centerY = 0
+    for _ in range(5):
+        centerX = 0
+        for _ in range(5):
+            drawCabbage(centerX, centerY)
+            centerX += 100
+        centerY += 100

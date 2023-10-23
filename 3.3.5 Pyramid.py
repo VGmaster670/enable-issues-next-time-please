@@ -11,107 +11,19 @@ def drawPyramid(blockHeight):
     # Draw the layers leading up to the top of the pyramid.
     ### (HINT: Using an align of 'bottom' will make it easier!)
     ### Place your code here ###
-    pyramid.add(
-        Rect(
-            25,
-            380,
-            350,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
+    for val in range(8):
+        pyramid.add(
+            Rect(
+                200,
+                380 - blockHeight * val,
+                350 - 30 * val,
+                blockHeight,
+                fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
+                border="black",
+                borderWidth=1,
+                align="bottom",
+            )
         )
-    )
-    pyramid.add(
-        Rect(
-            40,
-            380 - blockHeight,
-            320,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            55,
-            380 - blockHeight * 2,
-            290,
-            blockHeight,
-            align="bottom-lef8",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            70,
-            380 - blockHeight * 3,
-            260,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            85,
-            380 - blockHeight * 4,
-            230,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            100,
-            380 - blockHeight * 5,
-            200,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            115,
-            380 - blockHeight * 6,
-            170,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-    pyramid.add(
-        Rect(
-            130,
-            380 - blockHeight * 7,
-            140,
-            blockHeight,
-            align="bottom-left",
-            border="black",
-            borderWidth=1,
-            fill=gradient("saddleBrown", "darkGoldenrod", start="top"),
-        )
-    )
-
-    ### Intended Solution ###
-    # for val in range(8):
-    #     pyramid.add(
-    #         Rect(200,380-blockHeight*val,350-30*val,blockHeight,fill=gradient("saddleBrown","darkGoldenrod", start="top"),border="black",borderWidth=1,align="bottom"))
 
     # This variable defines the top of where the stairs should end.
     stairsTop = pyramid.top + 2 * blockHeight
