@@ -48,10 +48,10 @@ def onMouseDrag(mouseX, mouseY):
     #          mouseX is 400, the radius should be 201.)
     ### Place Your Code Here ###
     # for ring in app.ringList:
-    for index in range(len(app.ringList)):
-        if index % 2 == 0:
-            app.ringList[index].border = borderColor
-            app.ringList[index].radius = (mouseX / 2) + 1
+    for i, ring in enumerate(app.ringList):
+        if i % 2 == 0:
+            ring.border = borderColor
+            ring.radius = (mouseX / 2) + 1
 
 
 def onMouseRelease(mouseX, mouseY):
