@@ -69,20 +69,15 @@ def onMousePress(mouseX, mouseY):
     if salmon.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("coral")
-    if tuna.hits(mouseX, mouseY):
+    elif tuna.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("crimson")
-    if yellowTail.hits(mouseX, mouseY):
+    elif yellowTail.hits(mouseX, mouseY):
         moveConveyorBelt()
         makeSushi("lightCoral")
     # Otherwise, you should eat the sushi from right to left.
     ### (HINT: Be sure to set its visibility to False!)
     ### Place Your Code Here ###
-    if (
-        salmon.hits(mouseX, mouseY) == False
-        and tuna.hits(mouseX, mouseY) == False
-        and yellowTail.hits(mouseX, mouseY) == False
-    ):
-        if len(app.sushiOrder) != 0:
-            eaten = app.sushiOrder.pop()
-            eaten.visible = False
+    elif app.sushiOrder:
+        eaten = app.sushiOrder.pop()
+        eaten.visible = False

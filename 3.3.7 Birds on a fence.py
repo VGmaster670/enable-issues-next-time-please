@@ -31,8 +31,8 @@ def shiftBirds(birdList):
     ### (HINT: Loop through the list, and use the local variable birdGap
     #          combined with the index in order to space out the birds.)
     ### Place Your Code Here ###
-    for index in range(len(birdList)):
-        birdList[index].centerX = birdGap * (index + 1)
+    for i, bird in enumerate(birdList):
+        bird.centerX = birdGap * (i + 1)
 
 
 def addNewBird(birdList, yVal, prevDir):

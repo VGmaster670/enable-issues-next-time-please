@@ -171,7 +171,7 @@ def onMousePress(mouseX, mouseY):
     # Loop through the tower group to check if any layer is clicked on.
     # If it is, remove the fill of that layer from the app.towerColors list.
     ### Place Your Code Here ###
-    for layer in tower.children:
+    for layer in tower:
         if layer.hits(mouseX, mouseY):
             app.towerColors.remove(layer.fill)
     # Re-draws the tower with the modified app.towerColors list.

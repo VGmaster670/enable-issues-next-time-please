@@ -19,18 +19,8 @@ def onMousePress(mouseX, mouseY):
 
     # Remove the last value from the app.reds list and store it in newVal.
     ### Fix Your Code Here ###
-    newVal = app.reds.pop()
-
-    # Creates a new list with the last value.
-    newList = [newVal]
-
-    # Add all of the other red values to the newList.
-    ### (HINT: Loop over app.reds and add each element to newList.)
-    ### Place Your Code Here ###
-    for red in app.reds:
-        newList.append(red)
-    # Sets app.reds equal to the new list.
-    app.reds = newList
+    color = app.reds.pop()
+    app.reds.insert(0, color)
 
     # Shifts where the next rectangle will be drawn.
     app.y += 25
